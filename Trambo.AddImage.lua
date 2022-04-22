@@ -1,16 +1,11 @@
-﻿--Define some properties about your script
 script_name="@TRAMBO: Add Image"
 script_description="Add images / Replace main, second (karaoke), border, and shadow colors with images"
 script_author="TRAMBO"
 script_version="1.0"
 
-include("karaskel.lua") -- karaskel.lua written by Niels Martin Hansen and Rodrigo Braz Monteiro
 --Main 
 function main(sub, sel, act)
-   
-    local meta, styles = karaskel.collect_head(sub,false)
     sel = open_dialog(sub,sel)
-  
     aegisub.set_undo_point(script_name)
     return sel
 end
